@@ -15,22 +15,9 @@ $hashedPerSecond = $stats->hashesPerSecond;
 $hashedPerSecondTitle = number_format($hashedPerSecond, 0, '.',  '.');
 $hashesTotal = $stats->hashesTotal;
 
-if ($hashesTotal < 1000000) {
 
 // Anything less than a million
 $hashTotal = number_format($hashesTotal);
-
-} else if ($hashesTotal < 1000000000) {
-
-// Anything less than a billion
-$hashTotal = number_format($hashesTotal / 1000000, 2) . ' M';
-
-} else {
-
-// At least a billion
-$hashTotal = number_format($hashesTotal / 1000000000, 2) . ' B';
-
-}
 
 $xmr = $stats->xmrPending;
 ```
